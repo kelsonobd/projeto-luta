@@ -1,4 +1,5 @@
 class Character {
+    /* PERSONAGENS */
 
     _life = 1;
     maxlife = 1;
@@ -19,6 +20,7 @@ class Character {
 }
 
 class Knight extends Character {
+    // Guerreiro
     constructor(name) {
         super(name);
         this.life = 100;
@@ -29,6 +31,7 @@ class Knight extends Character {
 }
 
 class Sorcerer extends Character {
+    // Mago
     constructor(name) {
         super(name);
         this.life = 80;
@@ -39,6 +42,7 @@ class Sorcerer extends Character {
 }
 
 class LittleMonster extends Character {
+    // Mini Monstro
     constructor() {
         super('Little Monster');
         this.life = 40;
@@ -49,6 +53,7 @@ class LittleMonster extends Character {
 }
 
 class BigMonster extends Character {
+    // Grande monstro
     constructor() {
         super('Big Monster');
         this.life = 120;
@@ -56,4 +61,30 @@ class BigMonster extends Character {
         this.defense = 6;
         this.maxLife = this.life;
     }
+}
+
+
+// Cenário 
+class Stage {
+    constructor(fighter1, fighter2, fighter1El, fighter2El) {
+        this.fighter1 = fighter1;
+        this.fighter2 = fighter2;
+        this.fighter1El = fighter1El;
+        this.fighter2El = fighter2El;
+    }
+
+    start() {
+        this.update();
+    }
+
+    update(){
+        //Fighter 1
+        this.fighter1El.querySelector('.name').innerHTML = this.fighter1.name;
+
+        //Fighter 2
+        this.fighter2El.querySelector('.name').innerHTML = this.fighter2.name;
+
+    }
+
+
 }
