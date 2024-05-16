@@ -75,6 +75,9 @@ class Stage {
 
     start() {
         this.update();
+
+        this.fighter1El.querySelector('.attackButton').addEventListener('click', () => this.doAttack(this.fighter1, this.fighter2));
+        this.fighter2El.querySelector('.attackButton').addEventListener('click', () => this.doAttack(this.fighter2, this.fighter1));
     }
 
     update(){
@@ -88,5 +91,8 @@ class Stage {
         this.fighter2El.querySelector('.bar').style.width = `${f2Pct}%`;
     }
 
+    doAttack(attacking, attacked){
+
+    }
 
 }
