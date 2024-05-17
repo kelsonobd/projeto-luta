@@ -110,13 +110,14 @@ class Stage {
             this.log.addMessage(`${attacking.name} causou ${actualAttack.toFixed(2)} de dano em ${attacked.name}`)
         } else {
             this.log.addMessage(`${attacked.name} conseguiu defender...`)
-
         }
 
         this.update();
 
     }
 }
+
+// Dados da tela
 class Log {
     list = [];
 
